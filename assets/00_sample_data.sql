@@ -4,6 +4,8 @@
 -- Alternative to running each vignette's setup script individually
 -- ============================================================================
 
+-- Same role as 00_snowday_setup.sql so every object has one owner
+USE ROLE SYSADMIN;
 USE DATABASE COCO_WORKSHOP;
 USE SCHEMA SOURCE_DATA;
 USE WAREHOUSE COCO_WORKSHOP_WH;
@@ -126,7 +128,9 @@ INSERT INTO BRONZE_BAAN_AP_INVOICES VALUES
 ('BAN-007', 'BN-2025-1007', 'BV-302', 'Rotterdam Port Services', '2025-04-15', '2025-05-15', 16800.00, 'EUR', 'N30', 'BP-8007', 'Port handling and customs Apr', 'GL-610', 'BC-LOG', 'PENDING', '2025-04-15 08:30:00', 'BN-100'),
 ('BAN-008', 'BN-2025-1008', 'BV-303', 'Manchester Engineering Ltd', '2025-05-01', '2025-06-30', 22100.00, 'GBP', 'N60', 'BP-8008', 'Fabrication project Alpha phase 2', 'GL-520', 'BC-ENG', 'POSTED', '2025-05-01 09:00:00', 'BN-200'),
 ('BAN-009', 'BN-2025-1009', 'BV-306', 'Amsterdam IT Services BV', '2025-05-10', '2025-06-09', 12500.00, 'EUR', 'N30', 'BP-8009', 'Network infrastructure upgrade', 'GL-620', 'BC-IT', 'POSTED', '2025-05-10 11:00:00', 'BN-100'),
-('BAN-010', 'BN-2025-1010', 'BV-301', 'Nordic Metals AB', '2025-06-01', '2025-07-01', 29800.00, 'EUR', 'N30', 'BP-8010', 'Aluminum extrusions Jun shipment', 'GL-510', 'BC-MFG', 'APPROVED', '2025-06-01 06:00:00', 'BN-100');
+('BAN-010', 'BN-2025-1010', 'BV-301', 'Nordic Metals AB', '2025-06-01', '2025-07-01', 29800.00, 'EUR', 'N30', 'BP-8010', 'Aluminum extrusions Jun shipment', 'GL-510', 'BC-MFG', 'APPROVED', '2025-06-01 06:00:00', 'BN-100'),
+-- Known Baan issue (BR-003): nightly extract resent BN-2025-1004 under a new ID
+('BAN-011', 'BN-2025-1004', 'BV-301', 'Nordic Metals AB', '2025-03-10', '2025-04-09', 31200.00, 'EUR', 'N30', 'BP-8004', 'Steel plate order March', 'GL-510', 'BC-MFG', 'POSTED', '2025-03-11 02:05:00', 'BN-100');
 
 
 -- BRONZE_WORKDAY_AP_INVOICES
