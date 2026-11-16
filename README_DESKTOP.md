@@ -91,6 +91,12 @@ Run the setup scripts in the `assets/` folder to create the workshop environment
 
 This workshop follows a single Accounts Payable (AP) invoices storyline across three demos, from data discovery through operationalization and optional agent design.
 
+> **Stuck?** The `reference/` folder has working SQL you can compare against or run to catch up:
+> - `reference/silver_ap_invoices.sql`: the Silver Dynamic Table as it should be at the end of Demo 2 (all four sources and business rules)
+> - `reference/sv_ap_analytics.sql`: the Demo 3 semantic view, with a validation query
+>
+> CoCo's output will differ from these files, and that's expected. Use them to check your results, not as the only correct answer.
+
 <!-- ------------------------ -->
 ## Demo 1: Pipeline Builder
 
